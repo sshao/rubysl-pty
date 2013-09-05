@@ -1,7 +1,2 @@
-require "rubysl-pty/version"
-
-module RubySL
-  module Pty
-    # Your code goes here...
-  end
-end
+require "/pty/pty"
+require "rubysl/pty/version"

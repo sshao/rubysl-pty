@@ -3,7 +3,7 @@ require './lib/rubysl/pty/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rubysl-pty"
-  spec.version       = RubySL::Pty::VERSION
+  spec.version       = RubySL::PTY::VERSION
   spec.authors       = ["Brian Shirai"]
   spec.email         = ["brixen@gmail.com"]
   spec.description   = %q{Ruby standard library pty.}
@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.extensions    = ["ext/rubysl/pty/extconf.rb"]
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
