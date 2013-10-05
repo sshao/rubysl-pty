@@ -157,7 +157,7 @@ struct pty_info {
   VALUE thread;
 };
 
-static void getDevice _((int*, int*, char [DEVICELEN]));
+static void getDevice _((int*, int*, char [DEVICELEN], int));
 
 struct exec_info {
   int argc;
@@ -203,7 +203,7 @@ establishShell(int argc, VALUE *argv, struct pty_info *info,
     argc = 1;
     argv = &v;
   }
-  getDevice(&master, &slave, SlaveName);
+  getDevice(&master, &slave, SlaveName, 0);
 
   info->thread = rb_thread_current();
   VALUE child_pid = rb_funcall(rb_mKernel, rb_intern("fork"), 0);
