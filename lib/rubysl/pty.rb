@@ -1,2 +1,2 @@
-require "/pty/pty"
+require "pty/pty"
 require "rubysl/pty/version"
