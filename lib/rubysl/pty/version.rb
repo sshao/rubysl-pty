@@ -1,5 +1,5 @@
 module RubySL
-  module Pty
-    VERSION = "0.0.1"
+  module PTY
+    VERSION = "1.0.0"
   end
 end
